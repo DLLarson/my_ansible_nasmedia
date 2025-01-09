@@ -107,3 +107,30 @@ samba_users:
     write_list: larzmedia, dlarson
     group: ansible-nas
     path: "{{ larzmedia_root }}"
+
+# Shares you want published over Samba.
+samba_shares:
+  - name: movies
+    comment: "Movies"
+    guest_ok: yes
+    public: yes
+    writable: yes
+    browseable: yes
+    path: "{{ movies_root }}"
+
+  - name: tv
+    comment: "TV Episodes"
+    guest_ok: yes
+    public: yes
+    writable: yes
+    browseable: yes
+    path: "{{ tv_root }}"
+
+  - name: music
+    comment: "Music"
+    guest_ok: yes
+    public: yes
+    writable: yes
+    browseable: yes
+    path: "{{ music_root }}"
+
