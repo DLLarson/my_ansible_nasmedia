@@ -96,17 +96,14 @@ samba_users:
     password: "{{ dlarson_passwd }}"
   - name: jlarson
     password: "{{ jlarson_passwd }}"
-  - name: larzmedia
-    password: "{{ larzmedia_passwd }}"
   - name: larzmediaro
     password: "{{ larzmediaro_passwd }}"
-
   - name: larzmedia
     comment: "Overall access media"
+    password: "{{ larzmedia_passwd }}"
     public: no
     browsable: yes
     valid_users: larzmedia, dlarson
     write_list: larzmedia, dlarson
     group: ansible-nas
     path: "{{ larzmedia_root }}"
-
