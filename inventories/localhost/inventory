@@ -14,5 +14,5 @@
 ## Example when running directly on your Ansible-NAS server
 ansible-nas ansible_connection=local ansible_host=localhost
 
-[nasmedia]
+[nas]
 ansible-nas
