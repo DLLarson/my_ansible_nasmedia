@@ -42,7 +42,7 @@ netdata_enabled: true
 
 # Jellyfin
 
-jellyfin_enabled: true
+jellyfin_enabled: false
 jellyfin_available_externally: false
 
 jellyfin_config_directory: "{{ docker_home }}/jellyfin/config"
@@ -55,6 +55,17 @@ jellyfin_books_directory: "{{ books_root }}"
 jellyfin_audiobooks_directory: "{{ audiobooks_root }}"
 
 jellyfin_hostname: "{{ our_host_name }}"
+
+# Emby
+
+emby_enabled: true
+emby_available_externally: false
+
+emby_config_directory: "{{ docker_home }}/emby/config"
+emby_movies_directory: "{{ movies_root }}"
+emby_tv_directory: "{{ tv_root }}"
+
+emby_hostname: "{{ our_host_name }}"
 
 # Ansible-vault defined passwords for Samba.
 dlarson_passwd: !vault |
