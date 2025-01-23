@@ -54,6 +54,8 @@ jellyfin_tv_directory: "{{ tv_root }}"
 jellyfin_books_directory: "{{ books_root }}"
 jellyfin_audiobooks_directory: "{{ audiobooks_root }}"
 
+jellyfin_hostname: "{{ our_host_name }}"
+
 # Ansible-vault defined passwords for Samba.
 dlarson_passwd: !vault |
           $ANSIBLE_VAULT;1.1;AES256
