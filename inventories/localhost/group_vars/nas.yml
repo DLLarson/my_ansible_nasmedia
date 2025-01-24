@@ -64,6 +64,7 @@ emby_available_externally: false
 emby_config_directory: "{{ docker_home }}/emby/config"
 emby_movies_directory: "{{ movies_root }}"
 emby_tv_directory: "{{ tv_root }}"
+emby_music_directory: "{{ music_root }}"
 
 emby_hostname: "{{ our_host_name }}"
 
