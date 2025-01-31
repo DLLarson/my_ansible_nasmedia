@@ -1,6 +1,6 @@
 #!/bin/bash
 
 pushd ansible-nas
-git am ../patches
+git am ../patches/*
 popd
 
