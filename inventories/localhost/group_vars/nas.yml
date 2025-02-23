@@ -38,23 +38,7 @@ traefik_enabled: true
 heimdall_enabled: true
 portainer_enabled: true
 glances_enabled: true
-netdata_enabled: true
-
-# Jellyfin
-
-jellyfin_enabled: false
-jellyfin_available_externally: false
-
-jellyfin_config_directory: "{{ docker_home }}/jellyfin/config"
-
-jellyfin_movies_directory: "{{ movies_root }}"
-jellyfin_music_directory: "{{ music_root }}"
-jellyfin_photos_directory: "{{ photos_root }}"
-jellyfin_tv_directory: "{{ tv_root }}"
-jellyfin_books_directory: "{{ books_root }}"
-jellyfin_audiobooks_directory: "{{ audiobooks_root }}"
-
-jellyfin_hostname: "{{ our_host_name }}"
+#netdata_enabled: true
 
 # Emby
 
@@ -126,33 +110,7 @@ samba_users:
 samba_shares:
   - name: media
     comment: "Media root"
-    guest_ok: yes
-    public: yes
+    guest_ok: no
     writable: yes
     browseable: yes
     path: "{{ samba_shares_root }}"
-
-  - name: movies
-    comment: "Movies"
-    guest_ok: yes
-    public: yes
-    writable: yes
-    browseable: yes
-    path: "{{ movies_root }}"
-
-  - name: tv
-    comment: "TV Episodes"
-    guest_ok: yes
-    public: yes
-    writable: yes
-    browseable: yes
-    path: "{{ tv_root }}"
-
-  - name: music
-    comment: "Music"
-    guest_ok: yes
-    public: yes
-    writable: yes
-    browseable: yes
-    path: "{{ music_root }}"
-
