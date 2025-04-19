@@ -32,7 +32,7 @@ samba_workgroup: LARZVILLE
 samba_netbios_name: "{{ our_host_name }}"
 
 # Enable the reverse proxy for external access.
-traefik_enabled: true
+traefik_enabled: false
 
 # Enable some applications.
 heimdall_enabled: true
@@ -42,7 +42,7 @@ glances_enabled: true
 
 # Emby
 
-emby_enabled: true
+emby_enabled: false
 emby_available_externally: false
 
 emby_config_directory: "{{ docker_home }}/emby/config"
